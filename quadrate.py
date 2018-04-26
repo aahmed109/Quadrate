@@ -44,7 +44,7 @@ def intro():
                     pass
                 quit()
 
-        files = ["files/U-I.txt", "files/U-NI.txt", "files/NU-I.txt", "files/NU-NI.txt"]
+        files = ["files/U-I.txt", "files/NU-I.txt", "files/NU-NI.txt", "files/U-NI.txt"]
 
         gameDisplay.fill(white)
         pygame.draw.rect(gameDisplay, blue, (0, 100, 100, 300))
