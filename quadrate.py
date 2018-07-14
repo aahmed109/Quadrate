@@ -44,7 +44,7 @@ def intro():
                     pass
                 quit()
 
-        files = ["files/U-I.txt", "files/NU-I.txt", "files/NU-NI.txt", "files/U-NI.txt"]
+        files = ["files/U-I.txt", "files/NU-I.txt", "files/U-NI.txt", "files/NU-NI.txt"]
 
         gameDisplay.fill(white)
         pygame.draw.rect(gameDisplay, blue, (0, 100, 100, 300))
@@ -148,11 +148,9 @@ def text_to_rect(file, color, fileNum):
         if j<=9:
             s = lines[j].split('##')
             t = s[0]
-            if s[1] == 'done':
-                t = strike(s[0])
+
             button_text = font.render(t, True, color)
             gameDisplay.blit(button_text, [x, y + j * 30])
-
     f.close()
 
 
@@ -201,9 +199,6 @@ def gameLoop(name):
         for j in range(len(lines)):
             s = lines[j].split('##')
             t = s[0]
-
-            if s[1] == 'done':
-                t = strike(s[0])
 
             message_to_screen(t,black,30, 30 + j * 30)
 

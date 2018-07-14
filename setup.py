@@ -1,4 +1,4 @@
 from distutils.core import setup
 import py2exe
 
-setup(console=['quadrate.py'])
+setup(console=['quadrate.py'], requires=['pygame'])
